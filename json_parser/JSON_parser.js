@@ -91,7 +91,7 @@ function object_parser(input){
     return [object,input.slice(1)]
 }
 
-function json_Parser(input){
+function json_Parser(input){ //main function
     let parsevalue = array_parser(input) || object_parser(input)
     if(parsevalue === null || parsevalue[1].length > 0)return null 
     return parsevalue[0]
